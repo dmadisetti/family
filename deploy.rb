@@ -18,12 +18,12 @@ class NameCheap
 	end
 
 	def query
-		return call "#{@baseurl}&Command=#{@check}&SLD=smith&TLD=me"
+		return call "#{@baseurl}&Command=#{@check}&SLD=madisetti&TLD=me"
 	end
 
 	# Possibly change this to post
 	def process changes
-		return call "#{@baseurl}&Command=#{@update}&SLD=smith&TLD=me#{changes}"
+		return call "#{@baseurl}&Command=#{@update}&SLD=madisetti&TLD=me#{changes}"
 	end
 
 	def call url
@@ -67,7 +67,10 @@ def run()
 
 	# Lookup to see if match
 	data.each do |member|
-		changes += "&HostName#{count}=#{member['subdomain']}&RecordType#{count}=#{member['type']}&Address#{count}=#{member['address']}&TTL#{count}=1800"
+		changes += "&HostName#{count}=#{member['subdomain']}"
+		changes += "&RecordType#{count}=#{member['type']}"
+		changes += "&Address#{count}=" + URI.escape(member['address'], "= &")
+		changes += "&TTL#{count}=1800"
 		count += 1
 	end
 
