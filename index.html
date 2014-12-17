@@ -1,0 +1,16 @@
+---
+layout: default
+title: Just the fam
+---
+
+<ul class="family">
+{% for member in site.data.records %}
+	{% if member.image != nill %}
+	<li class="member" data-toggle="tooltip" data-placement="bottom" title="{{ member.name }}">
+		<a href="http://{{ member.subdomain }}.madisetti.me">
+			<img src="{{member.image}}" alt="{{ member.name }}" class="img">
+		</a>
+	</li>
+	{% endif %}
+{% endfor %}
+</ul>

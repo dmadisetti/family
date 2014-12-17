@@ -1,0 +1,10 @@
+name: "madisetti"
+description: "Directory of Madisetti\'s"
+
+url: "madisetti.me"
+
+paginate: 10
+
+markdown: rdiscount
+permalink: pretty
+pygments: true

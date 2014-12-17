@@ -1,0 +1,27 @@
+- name: madisetti.me
+  subdomain: "@"
+  address: 192.30.252.153
+  type: A
+
+- name: www
+  subdomain: www
+  address: madisetti.me
+  type: URL301
+
+- name: Dylan Madisetti
+  image: /images/dylan.jpg
+  subdomain: dylan
+  address: www.dylanmadisetti.com
+  type: URL301
+
+- name: Kimmie Madisetti
+  image: /images/kim.jpg
+  subdomain: kimmie
+  address: http://youstolemysunshine.tumblr.com
+  type: URL301
+
+# - name: Arun Madisetti
+#   image: /images/arun.jpg
+#   subdomain: arun
+#   address: facebook.com
+#   type: CNAME

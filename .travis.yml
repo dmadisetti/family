@@ -1,0 +1,18 @@
+language: ruby
+rvm:
+- 1.9.3
+
+# If it builds, we're good
+script:
+- jekyll build
+
+# after_success:
+# - ruby deploy.rb
+
+branches:
+  only:
+  - gh-pages
+
+env:
+  global:
+    secure: bXRAJVuuZ2QxVODaw0Vvyqeqs1uz9fJPsD0yrtVvxpdXAhbNRIqSB/jVYAcHbtf3JqvQ6Z8B4EsaAGMJO4VoYdKwO297QPyT4Qb5oeLKM24v7c6eMjddp4hYi6pBNqUTNEG2n/hYEBfX/5lN4/h6p5913onD1+9245PGn5vbBPs=
