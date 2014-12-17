@@ -4,7 +4,8 @@ rvm:
 
 # If it builds, we're good
 script:
-- jekyll build
+- bundle exec jekyll build
+- bundle exec htmlproof ./_site --disable_external # Check validity, but if the link hasn't even has DSN records set, then it doesn't make sense to try and resolve
 
 # after_success:
 # - ruby deploy.rb
