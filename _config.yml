@@ -7,4 +7,6 @@ paginate: 10
 
 markdown: rdiscount
 permalink: pretty
-pygments: true
+highlighter: true
+
+exclude: ['vendor'] # Here's to hoping it works

@@ -7,8 +7,8 @@ script:
 - bundle exec jekyll build
 - bundle exec htmlproof ./_site --disable_external # Check validity, but if the link hasn't even has DSN records set, then it doesn't make sense to try and resolve
 
-# after_success:
-# - ruby deploy.rb
+after_success:
+- ruby deploy.rb
 
 branches:
   only:
@@ -16,4 +16,5 @@ branches:
 
 env:
   global:
-    secure: bXRAJVuuZ2QxVODaw0Vvyqeqs1uz9fJPsD0yrtVvxpdXAhbNRIqSB/jVYAcHbtf3JqvQ6Z8B4EsaAGMJO4VoYdKwO297QPyT4Qb5oeLKM24v7c6eMjddp4hYi6pBNqUTNEG2n/hYEBfX/5lN4/h6p5913onD1+9245PGn5vbBPs=
+  - secure: bXRAJVuuZ2QxVODaw0Vvyqeqs1uz9fJPsD0yrtVvxpdXAhbNRIqSB/jVYAcHbtf3JqvQ6Z8B4EsaAGMJO4VoYdKwO297QPyT4Qb5oeLKM24v7c6eMjddp4hYi6pBNqUTNEG2n/hYEBfX/5lN4/h6p5913onD1+9245PGn5vbBPs=
+  - secure: WhQBbxV87Vyr5rkOsVyg670zwyOdsGl851CyM44Skb6CoG9fzho6WVG2scwjo5+w9UqE5SA7GW6MDJ20j10TohA55Vh6KOXtJvVFSXDs2X389VkdM1vLQx042sMs6yUTL5bQ6R+bdjhbebu2LatvyrGEfEw8nsDxfpFHKgHFusM=
