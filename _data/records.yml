@@ -30,8 +30,8 @@
   address: http://youstolemysunshine.tumblr.com
   type: URL301
 
-# - name: Arun Madisetti
-#   image: /images/arun.jpg
-#   subdomain: arun
-#   address: facebook.com
-#   type: CNAME
+- name: Arun Madisetti
+  image: /images/arun.jpg
+  subdomain: arun
+  address: sites.lightrocket.com
+  type: CNAME
