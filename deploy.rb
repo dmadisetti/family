@@ -4,7 +4,7 @@ require 'nokogiri'
 
 # Construct base url
 class NameCheap
-	def initialize()  
+	def initialize()
 		# Our commands
 		@check  = "namecheap.domains.dns.getHosts"
 		@update = "namecheap.domains.dns.setHosts"
